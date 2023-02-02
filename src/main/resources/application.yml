@@ -1,0 +1,28 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: sp02
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        name: defaultDataSource
+        password: 123
+        url: jdbc:mysql://localhost:3306/vue?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+        username: root
+    freemarker:
+        cache: false
+        charset: utf-8
+        expose-request-attributes: true
+        expose-session-attributes: true
+        suffix: .ftl
+        template-loader-path: classpath:/webapp/
+    web:
+        resources:
+            static-locations: classpath:/static/# 应用服务 WEB 访问端口
+mybatis:
+    mapper-locations: 'classpath:mapper/*xml '
+    type-aliases-package: com.example.sp02.mybatis.entity
+# 日志记录输出配置
+logging:
+    level:
+        com.example.sp02.mapper : debug
