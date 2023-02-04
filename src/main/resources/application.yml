@@ -22,6 +22,12 @@ spring:
 mybatis:
     mapper-locations: 'classpath:mapper/*xml '
     type-aliases-package: com.example.sp02.model
+
+pagehelper:
+    reasonable: true
+    supportMethodsArguments: true
+    page-size-zero: true
+    helper-dialect: mysql
 # 日志记录输出配置
 logging:
     level:
