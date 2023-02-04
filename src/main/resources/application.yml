@@ -21,7 +21,7 @@ spring:
             static-locations: classpath:/static/# 应用服务 WEB 访问端口
 mybatis:
     mapper-locations: 'classpath:mapper/*xml '
-    type-aliases-package: com.example.sp02.mybatis.entity
+    type-aliases-package: com.example.sp02.model
 # 日志记录输出配置
 logging:
     level:

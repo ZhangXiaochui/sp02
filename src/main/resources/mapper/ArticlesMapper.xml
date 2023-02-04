@@ -79,9 +79,15 @@
       body = #{body,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+<!--  <update id="updateByPrimaryKey" parameterType="com.example.sp02.model.Articles" >-->
+<!--    update t_articles-->
+<!--    set title = #{title,jdbcType=VARCHAR}-->
+<!--    where id = #{id,jdbcType=INTEGER}-->
+<!--  </update>-->
   <update id="updateByPrimaryKey" parameterType="com.example.sp02.model.Articles" >
     update t_articles
-    set title = #{title,jdbcType=VARCHAR}
+    set title = #{title,jdbcType=VARCHAR},
+        body = #{body,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
